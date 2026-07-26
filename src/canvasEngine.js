@@ -70,4 +70,4 @@ function drawShape(ctx, shape) {
   }
 }
 
-module.exports = { renderScene, CANVAS_WIDTH, CANVAS_HEIGHT };src/canvasEngine.js
+module.exports = { renderScene, CANVAS_WIDTH, CANVAS_HEIGHT };
