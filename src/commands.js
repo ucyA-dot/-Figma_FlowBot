@@ -128,4 +128,13 @@ async function handleCommand(bot, msg) {
       return renderAndSend(bot, chatId, session, 'Current canvas:');
 
     default:
-      return
+      return bot.sendMessage(chatId, 'Unknown command. Send /help to see what I can do.');
+  }
+}
+
+async function renderAndSend(bot, chatId, session, caption) {
+  const buffer = renderScene(session);
+  return bot.sendPhoto(chatId, buffer, { caption });
+}
+
+module.exports = { handleCommand };
